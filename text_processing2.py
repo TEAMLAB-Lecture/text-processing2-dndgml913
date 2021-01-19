@@ -37,7 +37,7 @@ def digits_to_words(input_string):
             digit_string += str(digit[int(c)])+" "
     
     if digit_string != "":
-        digit_string.rstrip()
+        digit_string = digit_string.rstrip()
 
     return digit_string
 
