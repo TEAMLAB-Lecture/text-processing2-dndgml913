@@ -85,7 +85,7 @@ def to_camel_case(underscore_str):
     
     camelcase_str = temp[i].lower()
     if i != len(temp)-1:
-        for j in temp[i:]:
+        for j in temp[i+1:]:
             camelcase_str += j.title()
 
     return camelcase_str
