@@ -77,7 +77,7 @@ def to_camel_case(underscore_str):
     temp = underscore_str[:].split("_") # len(temp) > 0
     
     i = 0
-    while temp[i] != '':
+    while temp[i] == '':
         i += 1
 
         if i == len(temp):
