@@ -74,19 +74,18 @@ def to_camel_case(underscore_str):
             >>> tp2.to_camel_case(underscore_str3)
             "alreadyCamel"
     """
-    temp = underscore_str[:].split("_")
+    temp = underscore_str[:].split("_") # len(temp) > 0
+    
     i = 0
-    if len(temp) != 0:
-        while temp[i] != '':
-            i+=1
-        if i != len(temp):
-            camelcase_str = temp[i].lower()
-            if i != len(temp)-1:
-                for j in temp[i:]:
-                    camelcase_str += j.title()
-        else:
-            camelcase_str = ''
-    else:
-        camelcase_str = temp.lower()
+    while temp[i] != '':
+        i += 1
+
+        if i == len(temp):
+            return ''
+    
+    camelcase_str = temp[i].lower()
+    if i != len(temp)-1:
+        for j in temp[i:]:
+            camelcase_str += j.title()
 
     return camelcase_str
